@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
 
 const PresentationMaterial = () => {
@@ -470,7 +470,7 @@ Dengan semua penerapan ini, Intranet jadi hub central buat seluruh aktivitas dan
     }
   };
 
-  const goToSection = (sectionIndex) => {
+  const goToSection = (sectionIndex: number) => {
     setActiveSection(sectionIndex);
     setActiveSlide(0);
   };
