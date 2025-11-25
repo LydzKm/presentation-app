@@ -237,54 +237,65 @@ setActiveSlide(0);
 };
 
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
-<div className="max-w-7xl mx-auto">
-<div className="text-center mb-8">
-<h1 className="text-4xl font-bold text-white mb-2">
-Internet, Intranet, dan Extranet
-</h1>
-<p className="text-purple-200">15 Slide - Efisien & To The Point</p>
-<p className="text-purple-300 text-sm mt-1">~25-30 menit presentasi + Q&A</p>
-</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 sm:p-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+            Internet, Intranet, dan Extranet
+          </h1>
+          <p className="text-purple-200 text-sm sm:text-base">
+            15 Slide - Efisien & To The Point
+          </p>
+          <p className="text-purple-300 text-xs sm:text-sm mt-1">
+            ~25-30 menit presentasi + Q&A
+          </p>
+        </div>
 
-        <div className="grid grid-cols-5 gap-2 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 mb-6">
           {sections.map((section, idx) => (
             <button
               key={idx}
               onClick={() => goToSection(idx)}
-              className={`p-3 rounded-lg transition-all ${
+              className={`p-3 rounded-lg transition-all text-left sm:text-center ${
                 activeSection === idx
-                  ? section.color + " text-white shadow-lg scale-105"
-                  : "bg-slate-700 text-slate-300 hover:bg-slate-600"
+                  ? section.color + ' text-white shadow-lg scale-105'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
             >
-              <div className="flex items-center justify-center gap-2 mb-1">
+              <div className="flex items-center justify-start sm:justify-center gap-2 mb-1">
                 <User size={16} />
-                <span className="font-semibold text-sm">{section.presenter}</span>
+                <span className="font-semibold text-sm">
+                  {section.presenter}
+                </span>
               </div>
-              <div className="text-xs opacity-80">{section.duration}</div>
+              <div className="text-xs opacity-80 pl-8 sm:pl-0">
+                {section.duration}
+              </div>
             </button>
           ))}
         </div>
 
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
-          <div className={`${currentSection.color} text-white p-6`}>
+          <div className={`${currentSection.color} text-white p-4 sm:p-6`}>
             <div className="flex justify-between items-center">
               <div>
-                <div className="text-sm opacity-90 mb-1">
-                  {currentSection.presenter} - Slide {activeSlide + 1}/{totalSlides}
+                <div className="text-xs sm:text-sm opacity-90 mb-1">
+                  {currentSection.presenter} - Slide {activeSlide + 1}/
+                  {totalSlides}
                 </div>
-                <h2 className="text-3xl font-bold">{currentSlide.title}</h2>
+                <h2 className="text-xl sm:text-3xl font-bold">
+                  {currentSlide.title}
+                </h2>
               </div>
-              <div className="text-right text-sm opacity-90">
+              <div className="text-right text-xs sm:text-sm opacity-90 hidden sm:block">
                 {currentSection.duration}
               </div>
             </div>
           </div>
 
-          <div className="p-8">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
+          <div className="p-4 sm:p-8">
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
                 Poin Penting (Untuk Slide)
               </h3>
@@ -292,43 +303,47 @@ Internet, Intranet, dan Extranet
                 {currentSlide.points.map((point, idx) => (
                   <li key={idx} className="flex gap-3">
                     <span className="text-purple-600 font-bold mt-1">•</span>
-                    <span className="text-slate-700 leading-relaxed">{point}</span>
+                    <span className="text-slate-700 leading-relaxed text-sm sm:text-base">
+                      {point}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-r-lg mb-8">
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-r-lg mb-6 sm:mb-8">
               <h3 className="text-sm font-semibold text-purple-900 mb-2">
                 📸 Gambar yang Perlu Dicari:
               </h3>
-              <p className="text-purple-800 text-sm italic">{currentSlide.imageDesc}</p>
+              <p className="text-purple-800 text-sm italic">
+                {currentSlide.imageDesc}
+              </p>
             </div>
 
-            <div className="bg-slate-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+            <div className="bg-slate-50 rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                 Script Narasi (Untuk Dibacakan)
               </h3>
-              <div className="text-slate-700 leading-relaxed whitespace-pre-line">
+              <div className="text-slate-700 leading-relaxed whitespace-pre-line text-sm sm:text-base">
                 {currentSlide.script}
               </div>
             </div>
           </div>
 
-          <div className="bg-slate-100 p-4 flex justify-between items-center">
+          <div className="bg-slate-100 p-2 sm:p-4 flex justify-between items-center">
             <button
               onClick={prevSlide}
               disabled={activeSection === 0 && activeSlide === 0}
               className="flex items-center gap-2 px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
             >
               <ChevronLeft size={20} />
-              Sebelumnya
+              <span className="hidden sm:inline">Sebelumnya</span>
             </button>
 
             <div className="text-center">
-              <div className="text-sm text-slate-600">
-                Progress: Slide {activeSection * 3 + activeSlide + 1} / 15
+              <div className="text-xs sm:text-sm text-slate-600">
+                Slide {activeSection * 3 + activeSlide + 1} / 15
               </div>
             </div>
 
@@ -340,14 +355,16 @@ Internet, Intranet, dan Extranet
               }
               className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
             >
-              Selanjutnya
+              <span className="hidden sm:inline">Selanjutnya</span>
               <ChevronRight size={20} />
             </button>
           </div>
         </div>
 
         <div className="mt-6 bg-slate-800 text-slate-200 rounded-lg p-6">
-          <h3 className="font-semibold mb-3 text-green-300">✅ VERSI COMPACT - 15 SLIDE</h3>
+          <h3 className="font-semibold mb-3 text-green-300">
+            ✅ VERSI COMPACT - 15 SLIDE
+          </h3>
           <ul className="space-y-2 text-sm">
             <li>• Setiap presenter dapat 3 slide (adil & merata)</li>
             <li>• Konten sudah digabung yang related, gak overload</li>
