@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
 
 const PresentationCompact = () => {
@@ -231,7 +231,7 @@ setActiveSlide(sections[activeSection - 1].slides.length - 1);
 }
 };
 
-const goToSection = (sectionIndex) => {
+const goToSection = (sectionIndex: number) => {
 setActiveSection(sectionIndex);
 setActiveSlide(0);
 };
