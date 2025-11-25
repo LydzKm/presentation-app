@@ -194,7 +194,7 @@ points: [
 "TANTANGAN: Biaya implementasi tinggi, butuh keahlian IT, akses jarak jauh terbatas, resistensi adopsi, biaya pengembangan"
 ],
 imageDesc: "Split diagram dengan ikon shield (keuntungan) vs cost/barrier (tantangan)",
-script: `Keuntungan Intranet: keamanan lebih baik data terlindung firewall, kontrol akses izin detail per orang, info terpusat satu sumber kebenbenaran, kolaborasi lebih baik tools terpadu, efisiensi operasional otomasi proses.\n\nTantangan: biaya tinggi invest server dan software, butuh keahlian IT perlu tim capable, akses jarak jauh terbatas susah dari luar kantor, resistensi adopsi karyawan resist perubahan, biaya pengembangan tambah user butuh upgrade.`
+script: `Keuntungan Intranet: keamanan lebih baik data terlindung firewall, kontrol akses izin detail per orang, info terpusat satu sumber kebenaran, kolaborasi lebih baik tools terpadu, efisiensi operasional otomasi proses.\n\nTantangan: biaya tinggi invest server dan software, butuh keahlian IT perlu tim capable, akses jarak jauh terbatas susah dari luar kantor, resistensi adopsi karyawan resist perubahan, biaya pengembangan tambah user butuh upgrade.`
 },
 {
 title: "EXTRANET - KEUNTUNGAN & TANTANGAN",
