@@ -50,7 +50,7 @@ const PresentationCompact = () => {
       ],
     },
     {
-      presenter: "ANGGOTA 1",
+      presenter: "Sellya",
       duration: "~5 menit",
       color: "bg-blue-600",
       slides: [
@@ -94,7 +94,7 @@ const PresentationCompact = () => {
       ],
     },
     {
-      presenter: "ANGGOTA 2",
+      presenter: "Agung",
       duration: "~5 menit",
       color: "bg-green-600",
       slides: [
@@ -139,7 +139,7 @@ const PresentationCompact = () => {
       ],
     },
     {
-      presenter: "ANGGOTA 3",
+      presenter: "Mega",
       duration: "~5 menit",
       color: "bg-orange-600",
       slides: [
@@ -181,7 +181,7 @@ const PresentationCompact = () => {
       ],
     },
     {
-      presenter: "ANGGOTA 4",
+      presenter: "Danang",
       duration: "~5 menit",
       color: "bg-red-600",
       slides: [
